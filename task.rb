@@ -6,6 +6,8 @@ def q1
 
   # 以下に回答を記載
 
+names.push("斎藤")
+puts names
 end
 
 def q2
@@ -14,6 +16,9 @@ def q2
 
   # 以下に回答を記載
 
+array1.push(array2)
+array = array1.flatten!
+p array
 end
 
 def q3
@@ -21,6 +26,8 @@ def q3
 
   # 以下に回答を記載
 
+  numbers.each
+puts numbers.count(3)
 end
 
 def q4
@@ -28,6 +35,7 @@ def q4
 
   # 以下に回答を記載
 
+sports=sports.compact
   # 以下は変更しないで下さい
   p sports
 end
@@ -37,7 +45,9 @@ def q5
   array2 = [1, 5, 8, 10]
 
   # 以下に回答を記載
-
+  
+puts array1.empty?
+puts array2.empty?
 end
 
 def q6
