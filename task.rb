@@ -84,7 +84,6 @@ def q9
 
   # 以下に回答を記載
 
-number =["会員No.1 ", "会員No.2 ","会員No.3 ","会員No.4 "]
 names.each.with_index(1) do |name, i|
   puts "会員No.#{i} #{name}さん"
 end
@@ -96,10 +95,10 @@ def q10
   # 以下に回答を記載
 
   foods.each do |food|
-    if(food.include?("うに"))
-      puts "#{food}は好物です\n"
+    if food.include?("うに")
+      puts "#{food}は好物です"
     else
-      puts "#{food}はまぁまぁ好きです\n"
+      puts "#{food}はまぁまぁ好きです"
     end
   end
 
@@ -110,8 +109,7 @@ def q11
 
   # 以下に回答を記載
 puts "ユーザーの趣味一覧"
-sports.flatten!
-sports.uniq!
+sports.flatten!.uniq!
   sports.each.with_index(1) do |sport, i|
     puts "No#{i} #{sport}"
   end
@@ -131,7 +129,8 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-
+user_data=update_data
+p user_data
 end
 
 def q14
@@ -139,6 +138,8 @@ def q14
 
   # 以下に回答を記載
 
+array=data.keys
+p array
 end
 
 def q15
@@ -146,6 +147,17 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
+  if data1.include?(:age)
+    puts "OK"
+  else
+    puts "NG"
+  end
+
+  if data2.include?(:age)
+    puts "OK"
+  else
+    puts "NG"
+  end
 
 end
 
@@ -159,6 +171,9 @@ def q16
 
   # 以下に回答を記載
 
+users.each do |user|
+  puts "私の名前は#{user[:name]}です。年齢は#{user[:age]}歳です。"
+end
 end
 
 class UserQ17
