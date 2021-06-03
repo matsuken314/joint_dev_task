@@ -129,7 +129,8 @@ def q13
   update_data = { age: 32, address: "沖縄" }
 
   # 以下に回答を記載
-user_data=update_data
+user_data[:age] = update_data[:age]
+user_data[:address] = update_data[:address]
 p user_data
 end
 
@@ -138,7 +139,7 @@ def q14
 
   # 以下に回答を記載
 
-array=data.keys
+array = data.keys
 p array
 end
 
@@ -147,18 +148,8 @@ def q15
   data2 = { name: "yamada", hobby: "baseball", role: "normal" }
 
   # 以下に回答を記載
-  if data1.include?(:age)
-    puts "OK"
-  else
-    puts "NG"
-  end
-
-  if data2.include?(:age)
-    puts "OK"
-  else
-    puts "NG"
-  end
-
+  puts data1.include?(:age) ?  "OK" : "NG"
+  puts data2.include?(:age) ?  "OK" : "NG"
 end
 
 def q16
